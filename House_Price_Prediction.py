@@ -36,7 +36,7 @@ def set_bg_hack(main_bg):
      )
 
 
-set_bg_hack('bg.png')
+# set_bg_hack('bg.png')
 
 def get_random_points(state, city, num_points=1):
     geolocator = Nominatim(user_agent="streamlit_app")
@@ -240,7 +240,7 @@ if city_value is not None and state_value is not None:
         m = folium.Map(location = st.session_state["exactLocation"], zoom_start = 12)
         folium.Marker(
             location = st.session_state["exactLocation"],
-            popup = f"Predicted Price: ${st.session_state["average_prediction"]:,.2f}",
+            popup = f'Predicted Price: ${st.session_state["average_prediction"]:,.2f}',
             icon = folium.Icon(color = 'blue')
         ).add_to(m)
 
